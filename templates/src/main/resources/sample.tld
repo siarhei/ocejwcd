@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+    "http://java.sun.com/j2ee/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib> <!-- This is the root element of the file. -->
+  <tlibversion>1.0</tlibversion> <!-- This is required. -->.
+  <jspversion>1.2</jspversion> <!-- This is required. -->
+  <shortname>samplelib</shortname> <!-- This is required. Used by IDEs. -->
+<!-- Lot of other optional elements like uri, display-name, small-icon, large-icon, description, validator, listener*. -->
+<!-- Now you can have one or more tag elements. -->
+
+<!-- Each tag defines an action or an useful component that can do something useful. -->
+<tag>
+  <name>sayHello</name>
+  <tag-class>com.abc.HelloTag</tag-class>
+  <body-content>JSP</body-content>
+  <attribute>
+    <name>theGuy</name> <!-- Required. -->
+    <required>true</required>  <!-- Optional. Possible values: true, false, yes no. Default is false. -->
+    <rtexprvalue>no<rtexprvalue> <!-- Optional. Possible values: true, false, yes no. If yes, then it means the value of the attribute will be generated at run time. Possibly by evaluating a scriptlet. -->
+    <type>java.lang.String</type> <!-- Optional. For static values it is always java.lang.String. But dynamic values it should match the return type of the object that is returned by the scriptlet. -->
+    <description>takes the name to say hello to!</description> <!-- Optional. -->
+  </attribute>
+</tag>
+
+</taglib>
