@@ -11,6 +11,12 @@
 
     <description>Parent Module for OCEJWCD preparation</description>
 
+    <properties>
+        <maven-compiler-plugin-version>2.3.2</maven-compiler-plugin-version>
+        <maven-resources-plugin-version>2.5</maven-resources-plugin-version>
+        <maven-war-plugin-version>3.0.0</maven-war-plugin-version>
+    </properties>
+
     <modules>
         <module>murach</module>
         <module>templates</module>
@@ -33,5 +39,46 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin-version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven-resources-plugin-version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven-war-plugin-version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <compilerVersion>1.7</compilerVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
