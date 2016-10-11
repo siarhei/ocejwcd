@@ -6,6 +6,7 @@
         <artifactId>ocejwcd-parent</artifactId>
         <groupId>by.siarhei.ocejwcd</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -17,6 +18,7 @@
 
     <modules>
         <module>murach-domain</module>
+        <module>murach-web</module>
         <module>ch02email</module>
         <module>ch05email</module>
         <module>ch07download</module>
@@ -27,7 +29,14 @@
             <dependency>
                 <groupId>by.siarhei.ocejwcd.murach</groupId>
                 <artifactId>murach-domain</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>by.siarhei.ocejwcd.murach</groupId>
+                <artifactId>murach-web</artifactId>
+                <type>war</type>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
