@@ -18,6 +18,8 @@
     <modules>
         <module>murach-domain</module>
         <module>ch02email</module>
+        <module>ch05email</module>
+        <module>ch07download</module>
     </modules>
 
     <dependencyManagement>
