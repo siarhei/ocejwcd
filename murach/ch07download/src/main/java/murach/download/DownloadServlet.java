@@ -125,8 +125,7 @@ public class DownloadServlet extends HttpServlet {
 
         // create and return a URL for the appropriate Download page
         String productCode = (String) session.getAttribute("productCode");
-        String url = "/" + productCode + "_download.jsp";
-        return url;
+        return "/" + productCode + "_download.jsp";
     }
 
     private String deleteCookies(HttpServletRequest request,
@@ -138,7 +137,6 @@ public class DownloadServlet extends HttpServlet {
             cookie.setPath("/"); //allow the download application to access it
             response.addCookie(cookie);
         }
-        String url = "/delete_cookies.jsp";
-        return url;
+        return "/delete_cookies.jsp";
     }
 }

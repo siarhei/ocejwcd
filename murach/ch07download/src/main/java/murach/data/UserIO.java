@@ -4,6 +4,7 @@ import murach.business.User;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class UserIO {
@@ -55,9 +56,9 @@ public class UserIO {
         }
     }
 
-    public static ArrayList<User> getUsers(String filepath) {
+    public static List<User> getUsers(String filepath) {
         try {
-            ArrayList<User> users = new ArrayList<User>();
+            List<User> users = new ArrayList<>();
             BufferedReader in = new BufferedReader(
                     new FileReader(filepath));
             String line = in.readLine();
