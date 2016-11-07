@@ -6,6 +6,10 @@
     <servlet>
         <servlet-name>DownloadServlet</servlet-name>
         <servlet-class>murach.download.DownloadServlet</servlet-class>
+        <init-param>
+            <param-name>musicRootDir</param-name>
+            <param-value>/Volumes/JetDrive/music/</param-value>
+        </init-param>
     </servlet>
 
     <servlet-mapping>

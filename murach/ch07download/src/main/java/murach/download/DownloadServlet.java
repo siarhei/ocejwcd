@@ -1,6 +1,7 @@
 package murach.download;
 
 import murach.business.User;
+import murach.data.MusicStore;
 import murach.data.UserIO;
 import murach.util.CookieUtil;
 
@@ -33,6 +34,9 @@ public class DownloadServlet extends HttpServlet {
         } else if (action.equals("deleteCookies")) {
             url = deleteCookies(request, response);
         }
+
+        MusicStore ms = new MusicStore();
+        ms.init(getServletConfig().getInitParameter("musicRootDir"));
 
         // forward to the view
         getServletContext()
